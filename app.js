@@ -123,7 +123,7 @@ var bind = typeof addr === 'string'
   : 'port ' + addr.port;
 ('Listening on ' + bind);
 logger.info('server listening on port' + addr.port, 'serverOnListeningHandler', 10);
-let db = mongoose.connect(appConfig.db.uri,{ useMongoClient: true });
+let db = mongoose.connect(appConfig.db.uri,{ useNewUrlParser: true,useCreateIndex: true, useUnifiedTopology: true });
 }
 
 process.on('unhandledRejection', (reason, p) => {
