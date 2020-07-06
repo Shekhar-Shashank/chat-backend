@@ -17,7 +17,7 @@ const redisLib = require("./redisLib.js");
 
 let setServer = (server) => {
 
-    let allOnlineUsers = []
+    //let allOnlineUsers = []
 
     let io = socketio.listen(server);
 
